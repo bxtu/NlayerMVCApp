@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Nlayer.Core.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nlayer.Repository.Repostories
 {
@@ -14,7 +9,7 @@ namespace Nlayer.Repository.Repostories
         protected readonly AddDbContext _context;
         private readonly DbSet<T> _dbSet;
 
-        public GenericRepository(AddDbContext context, DbSet<T> dbSet)
+        public GenericRepository(AddDbContext context)
         {
             _context = context;
             _dbSet = _context.Set<T>();
